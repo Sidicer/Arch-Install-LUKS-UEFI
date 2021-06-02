@@ -35,7 +35,7 @@ mkfs.ext4 /dev/sdX2
 ```bash
 mount /dev/sdX2 /mnt
 mkdir /mnt/efi
-mount /dev/sdX1 /mtn/efi
+mount /dev/sdX1 /mnt/efi
 ```
 
 Installs linux kernel, base dependencies and some developer tools
@@ -64,7 +64,7 @@ systemctl enable NetworkManager
 
 Install GRUB into /EFI partition
 ```bash
-grub-install --target=x86_64-efi --efi-directory=/dev/sdX1 --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=/mnt/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
