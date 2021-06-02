@@ -1,6 +1,8 @@
 # Arch Linux Installation 2021
 
-I had issues installing Arch onto Dells Hardware Raid with UEFI so this is the steps I took to successfully install and launch Arch Linux 
+I had issues installing Arch onto Dell PowerEdge R620 with Hardware Raid 1 (UEFI) so these are the steps I took to successfully install and launch Arch Linux.
+
+Download Arch Linux from https://archlinux.org/download/ and DD it onto your USB
 
 ## Installation
 ```bash
