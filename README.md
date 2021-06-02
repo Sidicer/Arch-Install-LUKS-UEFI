@@ -169,6 +169,18 @@ chsh -s /usr/bin/zsh
 sudo pacman -S git i3 i3-gaps xorg xorg-xinit
 # 1 3 4 5 (i3-gaps - gives spacing)
 ```
+```bash
+vim .xinitrc
+# add "exec i3"
+# :wq
+```
+```bash
+startx
+```
+
+## If you are not able to see any text (only random symbols or just colored dots): You have issue with fonts on your machine
+Press "ENTER" "ENTER" until middle dialog dissapears and then press MOD+ENTER (WIN+ENTER/ALT+ENTER), A Terminal should appear and should be usable/able to view text
+## Follow next steps in this guide:
 
 ## Install Bitmap Fonts
 
