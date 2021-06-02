@@ -180,9 +180,13 @@ startx
 
 ## If you are not able to see any text (only random symbols or just colored dots): You have issue with fonts on your machine
 Press "ENTER" "ENTER" until middle dialog dissapears and then press MOD+ENTER (WIN+ENTER/ALT+ENTER), A Terminal should appear and should be usable/able to view text
-## Follow next steps in this guide:
+## Install ttf-dejavu fonts (i3/xorg recognized font)
+```bash
+sudo pacman -S ttf-dejavu"
+```
+Press "MOD+C and MOD+R" to refresh i3 config, you should be able to see Window Titlebars and Status bar below
 
-## Install Bitmap Fonts
+## (additionally) Install Bitmap Fonts
 
 ```bash
 git clone https://github.com/Tecate/bitmap-fonts.git
