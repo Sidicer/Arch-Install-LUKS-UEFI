@@ -164,24 +164,21 @@ chsh -s /usr/bin/zsh
 # Tip: If replacing bash, users may want to move some code from ~/.bashrc to ~/.zshrc (e.g. the prompt and the aliases) and from ~/.bash_profile to ~/.zprofile (e.g. the code that starts the X Window System).
 ```
 
+## Setup Xorg & Window Tiling
+```bash
+sudo pacman -S git i3 i3-gaps xorg xorg-xinit
+# 1 3 4 5 (i3-gaps - gives spacing)
+```
+
 ## Install Bitmap Fonts
 
 ```bash
-pacman -S git
 git clone https://github.com/Tecate/bitmap-fonts.git
 cd bitmap-fonts
-sudo cp -avr bitmap/ /usr/share/fonts
+sudo cp -avr bitmap/ /usr/share/fonts/
 cd /usr/share/fonts/bitmap
 mkfontscale
 mkfontdir
 xset fp+ /usr/share/fonts/bitmap
 fc-cache -fv
-```
-
-## Setup Window Tiling
-```bash
-sudo pacman -S i3 i3-gaps xorg xorg-xinit
-# 1 3 4 5 (i3-gaps - gives spacing)
-
-startx i3
 ```
