@@ -167,6 +167,7 @@ chsh -s /usr/bin/zsh
 ## Install Bitmap Fonts
 
 ```bash
+pacman -S git
 git clone https://github.com/Tecate/bitmap-fonts.git
 cd bitmap-fonts
 sudo cp -avr bitmap/ /usr/share/fonts
