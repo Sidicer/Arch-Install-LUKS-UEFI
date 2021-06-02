@@ -20,6 +20,8 @@ Partition Disk for Boot (EFI) and Root (Rest of the disk)
 ```bash
 cfdisk /dev/sdX
 
+# Select Label Type: GPT
+
 # 512M Partition /mnt/efi TYPE=EFI
 # ALL Partition /mnt TYPE=LINUX_86_64
 ```
