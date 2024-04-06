@@ -162,7 +162,23 @@ Save and exit with `:wq` and update bootloader
 bootctl update
 ```
 
-## TODO: Update Mkinitpcio ADD INFO HERE
+### Add modules to mkinitpcio
+`vim /etc/mkinitpcio.conf`
+Update `HOOKS` to have `encrypt lvm2` between `keymap filesystems`
+```sh
+HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)
+```
+If you have an NVME drive like in this tutorial add it to modules
+```
+MODULES=(nvme)
+```
+
+Save the file with `:wq` and update initramfs
+```sh
+mkinitpcio -p linux
+```
+
+### Miscellaneous configuration 
 
 Enable NetworkManager
 ```sh
@@ -170,21 +186,21 @@ systemctl enable NetworkManager
 ```
 
 Change your region and localtime, sync clock
-```bash
+```sh
 ln -sf /usr/share/zoneinfo/REGION/CITY /etc/localtime
 hwclock --systohc
 ```
 
-```bash
+```sh
 # Edit /etc/locale.gen and uncomment en_US.UTF-8 UTF-8 and other needed locales. Generate the locales by running:
 locale-gen
 
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 ```
 
-Setup your machines hostname
+Setup your hostname
 ```bash
-echo "Machines Hostname" > /etc/hostname
+echo Archlinux > /etc/hostname
 ```
 
 Setup root password:
