@@ -1,5 +1,5 @@
 # Arch Linux Installation
-UEFI, with full disk encryption (LUKS) and LVM for flexibility.
+with UEFI, full disk encryption using LUKS and LVM2 for volume managament.
 
 ---
 
